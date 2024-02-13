@@ -1,162 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Valentine Proposal</title>
-    <style>
-        body {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height:  100vh;
-            margin-top: -16px;
-            background-color: #FFC0CB; /* Light pink background */
-            color: #FF0000; /* Red text color */
-            font-family: Arial, sans-serif; /* Default font family */
-        }
-        
-        #image {
-            width:  200px;
-            height: auto;
-        }
-        
-        .text-4xl {
-            font-size:  2em;
-        }
-        
-        .my-4 {
-            margin-top:  1rem;
-            margin-bottom:  1rem;
-        }
-        
-        .font-bold {
-            font-weight: bold;
-        }
-        
-        .py-2 {
-            padding-top:  0.5rem;
-            padding-bottom:  0.5rem;
-        }
-        
-        .px-4 {
-            padding-left:  1rem;
-            padding-right:  1rem;
-        }
-        
-        .rounded {
-            border-radius:  0.25rem;
-        }
-        
-        .mr-4 {
-            margin-right:  1rem;
-        }
-        
-        /* Heart shape creation using pseudo-elements */
-        .heart {
-            position: relative;
-            display: inline-block;
-            width:  30px;
-            height:  30px;
-            background-color: red;
-            transform: rotate(-45deg);
-        }
-        
-        .heart:before,
-        .heart:after {
-            content: "";
-            position: absolute;
-            width:  30px;
-            height:  30px;
-            border-radius:  50%;
-            background-color: red;
-        }
-        
-        .heart:before {
-            top: -15px;
-            left:  0;
-        }
-        
-        .heart:after {
-            left:  15px;
-            top:  0;
-        }
-    </style>
-</head>
-<body>
-    <div id="app">
-        <div class="heart"></div> <!-- Heart shape -->
-        <img id="image" src="https://gifdb.com/images/high/cute-love-bear-roses-ou7zho5oosxnpo6k.gif">
-        <h1 id="title" class="text-4xl my-4">mwah?</h1>
-        <div id="buttons">
-            <button id="yesButton" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mr-4">Yes</button>
-            <button id="noButton" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">No</button>
-        </div>
-        <div id="message"></div>
-    </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UntoldCoding</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section id="home" class="home">
+      <div class="home_section"></div>
+      <div id="container">
+        <div class="left"></div>
+        <div class="right"></div>
+        <a href="new.html"
+          ><p>
+            Happy Valentine's Day <br />
 
-    <script>
-        let noCount =  0;
-        let yesPressed = false;
-        const yesButtonSize = noCount *  20 +  16;
-
-        document.getElementById('noButton').addEventListener('click', handleNoClick);
-        document.getElementById('yesButton').addEventListener('click', function() {
-            yesPressed = true;
-            updateView();
-        });
-
-        function handleNoClick() {
-            noCount++;
-            updateView();
-        }
-
-        function getNoButtonText() {
-            const phrases = [
-                "No",
-                "Are you sure?",
-                "Really sure?",
-                "Think again!",
-                "Last chance!",
-                "Surely not?",
-                "You might regret this!",
-                "Give it another thought!",
-                "Are you absolutely certain?",
-                "This could be a mistake!",
-                "Have a heart!",
-                "Don't be so cold!",
-                "Change of heart?",
-                "Wouldn't you reconsider?",
-                "Is that your final answer?",
-                "You're breaking my heart ;(",
-            ];
-
-            return phrases[Math.min(noCount, phrases.length -  1)];
-        }
-
-        function updateView() {
-            const app = document.getElementById("app");
-            const image = document.getElementById("image");
-            const title = document.getElementById("title");
-            const buttons = document.getElementById("buttons");
-            const message = document.getElementById("message");
-
-            if (yesPressed) {
-                image.src = "https://media.tenor.com/gUiu1zyxfzYAAAAi/bear-kiss-bear-kisses.gif";
-                title.innerHTML = "Ok yay!!!";
-                buttons.style.display = "none";
-                message.innerHTML = "";
-            } else {
-                image.src = "https://gifdb.com/images/high/cute-love-bear-roses-ou7zho5oosxnpo6k.gif";
-                title.innerHTML = "Can I give you a kiss Red UwU?";
-                buttons.style.display = "block";
-                message.innerHTML = noCount ===  0 ? "" : getNoButtonText();
-                document.getElementById('noButton').innerText = noCount ===  0 ? "No" : message.innerHTML;
-            }
-        }
-
-        // Initial call to update the view
-        updateView();
-    </script>
-</body>
+            <span>Click Here</span>
+          </p></a
+        >
+      </div>
+      <h1><span>I&nbsp;</span><span>You</span></h1>
+      <h2>
+        I have Something for you💖 <br />
+        Please Hover on Above Text And click on Valentine's Heart
+      </h2>
+    </section>
+  </body>
 </html>
